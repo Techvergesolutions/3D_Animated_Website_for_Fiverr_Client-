@@ -26,12 +26,12 @@ const Footer = () => {
           <div data-w-id="a91eae88-2cd2-a6a2-03b1-a73f4b02afd9" className="made-container fade-in-move-on-scroll">
             <div className="made-by-azwedo">
               <div className="light-grey">
-                Made<span className="text-gradient-1"></span> by <a href="https://webflow.com/templates/designers/azwedo" target="_blank" className="external-link">Azwedo</a>
+                Made<span className="text-gradient-1"></span> by <a href="https://webflow.com/templates/designers/azwedo" target="_blank" className="external-link">TechVergeSolutions</a>
               </div>
             </div>
             <div className="powered-by">
               <div className="light-grey">
-                Powered by <a href="https://webflow.com" target="_blank" className="external-link">Webflow</a>
+                Powered by <a href="https://webflow.com" target="_blank" className="external-link">TechVergeSolutions</a>
               </div>
             </div>
           </div>
@@ -64,7 +64,7 @@ const Footer = () => {
               </li>
               <li className="footer-list-item">
                 <a href="mailto:info@website.com?subject=Webflow%20Template%20Contact" className="link w-inline-block">
-                  <div>info@website.com</div>
+                  <div>https://techvergesolutions.com</div>
                 </a>
               </li>
             </ul>
