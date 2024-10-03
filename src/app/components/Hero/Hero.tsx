@@ -8,27 +8,27 @@ const Hero = () => {
   useEffect(() => {
     const heroSticky: any = document.querySelector(".scroll");
 
-  // Check if there's a saved scroll position in localStorage
-  const savedScrollPosition = localStorage.getItem("scrollPosition");
-  if (savedScrollPosition) {
-    // Scroll to saved position
-    window.scrollTo({
-      top: parseInt(savedScrollPosition),
-    });
-  } else {
-    // Fallback to scrolling to heroSticky if no saved position
-    window.scrollTo({
-      top: heroSticky.offsetTop,
-    });
-  }
+    // Check if there's a saved scroll position in localStorage
+    const savedScrollPosition = localStorage.getItem("scrollPosition");
+    if (savedScrollPosition) {
+      // Scroll to saved position
+      window.scrollTo({
+        top: parseInt(savedScrollPosition),
+      });
+    } else {
+      // Fallback to scrolling to heroSticky if no saved position
+      window.scrollTo({
+        top: heroSticky.offsetTop,
+      });
+    }
 
-  // Function to update scroll position in localStorage on scroll
-  const updateScrollPosition = () => {
-    localStorage.setItem("scrollPosition", window.scrollY.toString());
-  };
+    // Function to update scroll position in localStorage on scroll
+    const updateScrollPosition = () => {
+      localStorage.setItem("scrollPosition", window.scrollY.toString());
+    };
 
-  // Add scroll event listener to save position on scroll
-  window.addEventListener("scroll", updateScrollPosition);
+    // Add scroll event listener to save position on scroll
+    window.addEventListener("scroll", updateScrollPosition);
     const tl = gsap.timeline();
 
     // Initial tilt effect from 90 degrees to 0 degrees
@@ -213,13 +213,13 @@ const Hero = () => {
                     <div className="from-holder">
                       <input
                         className="text-field-form w-input"
-                        maxLength="256"
+                        maxLength={256}
                         name="email-2"
                         data-name="Email 2"
                         placeholder="Enter Your Email"
                         type="email"
                         id="email-2"
-                        required=""
+                      // required={ }
                       />
                       <input
                         type="submit"
@@ -231,7 +231,7 @@ const Hero = () => {
                   </form>
                   <div
                     className="success-message w-form-done"
-                    tabIndex="-1"
+                    tabIndex={-1}
                     role="region"
                     aria-label="Email Form success"
                   >
@@ -239,7 +239,7 @@ const Hero = () => {
                   </div>
                   <div
                     className="error-message w-form-fail"
-                    tabIndex="-1"
+                    tabIndex={-1}
                     role="region"
                     aria-label="Email Form failure"
                   >

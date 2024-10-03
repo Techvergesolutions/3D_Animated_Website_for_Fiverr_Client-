@@ -8,8 +8,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Header = () => {
   // Create refs for sections and navigation links
-  const sectionsRef:any = useRef([]);
-  const navLinksRef:any = useRef([]);
+  const sectionsRef: any = useRef([]);
+  const navLinksRef: any = useRef([]);
 
   useEffect(() => {
     // Get all sections and nav links on component mount
@@ -17,7 +17,7 @@ const Header = () => {
     navLinksRef.current = document.querySelectorAll('.nav-link-holder');
 
     // Set up GSAP ScrollTrigger for each section
-    sectionsRef.current.forEach((section:any) => {
+    sectionsRef.current.forEach((section: any) => {
       ScrollTrigger.create({
         trigger: section,
         start: 'top center',
@@ -28,9 +28,9 @@ const Header = () => {
     });
 
     // Function to update active nav link
-    const updateNavLink = (id:any) => {
+    const updateNavLink = (id: any) => {
       // Remove `w--current` from all links
-      navLinksRef.current.forEach((link:any) =>
+      navLinksRef.current.forEach((link: any) =>
         link.classList.remove('w--current')
       );
       // Add `w--current` to the current section link
@@ -125,7 +125,7 @@ const Header = () => {
               className="menu-button w-nav-button"
               aria-label="menu"
               role="button"
-              tabIndex="0"
+              tabIndex={0}
               aria-controls="w-nav-overlay-0"
               aria-haspopup="menu"
               aria-expanded="false"
